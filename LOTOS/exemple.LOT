@@ -1,0 +1,10 @@
+System exemple[a,b] :=
+exp1[a,b]>>exp2[b,a]
+where
+process exp1[x,y] :=
+x;y;exit
+endproc
+process exp2[x,y] :=
+x;exit|||y;exit
+endproc
+endsys

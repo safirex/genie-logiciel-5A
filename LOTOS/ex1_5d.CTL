@@ -1,0 +1,1 @@
+E G ( a and (E X ( E [ (not b ) U ( E X a ) ] ) ) )

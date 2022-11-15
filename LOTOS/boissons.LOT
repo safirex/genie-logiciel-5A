@@ -1,0 +1,20 @@
+system distributeur[cent,eur,caffe,tea,monnaie] :=
+              paye[cent,eur] >>   recupere[caffe,tea,monnaie]
+      where
+      process paye[x,y] :=
+              x; tryrepeat[x,y]
+              []
+              y; tryrepeat[x,y]
+      endproc
+      process tryrepeat[x,y] :=
+            paye[x,y]
+            []
+            exit
+      endproc
+      process recupere[a,b,c] :=
+            a;c;exit
+            []
+            b;c;exit
+      endproc
+      
+endsys

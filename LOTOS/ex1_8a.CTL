@@ -1,0 +1,1 @@
+A G not (( a or d ) => E X (d))

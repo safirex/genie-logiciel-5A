@@ -1,0 +1,10 @@
+System ex2[a,b,c,d] :=
+                p2[a,b,c,d]
+        where
+        process p2[x,y,z,w] :=
+                x;y;loop[z,w]
+        endproc
+        process loop[x,y] :=
+                x;y;loop[x,y]
+        endproc
+endsys

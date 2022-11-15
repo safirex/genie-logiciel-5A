@@ -1,0 +1,1 @@
+ A G (c => A F (a or b))

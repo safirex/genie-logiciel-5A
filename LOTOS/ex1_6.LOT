@@ -1,0 +1,19 @@
+System ex1[a,b,c,d] :=
+              choice[a,b,c,d] |[b,a]| p2[a,b,c,d]
+       where
+       process choice[x,y,z,w] :=
+              z;w;exit
+              []
+              loop[x,y,z,w]
+       endproc
+       process loop[x,y,z,w]:=
+              x;y;choice[x,y,z,w]  
+       endproc
+
+        process p2[x,y,z,w] :=
+                x;y;loop2[z,w]
+        endproc
+        process loop2[x,y] :=
+                x;y;loop2[x,y]
+        endproc
+endsys
